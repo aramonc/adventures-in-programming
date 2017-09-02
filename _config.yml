@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: Navigato
+subtitle: Adventures in web development & world travel
+description: Frances & I are spending 3 months in Barcelona while she learns how to become a web developer. We've given up our apartment in Miami, the cats are staying with her dad, and every day is going to be a new adventure in not being tourists.
+author: Adrian Cardenas & Frances Morales
+language: en
+timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://navigato.herokuapp.com/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
@@ -30,11 +30,11 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: true # Transform title into titlecase
 external_link: true # Open external links in new tab
-filename_case: 0
+filename_case: 1
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -61,7 +61,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: MM/DD/YYYY
 time_format: HH:mm:ss
 
 # Pagination
@@ -77,4 +77,58 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: heroku
+  repo: https://git.heroku.com/navigato.git
+
+# RSS Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+
+# Asset Pipeline
+asset_pipeline:
+  revisioning:
+    enable: true
+    keep: true
+    exclude: ['sitemap.xml', 'robots.txt', 'atom.xml']
+  clean_css:
+    enable: true
+  uglify_js:
+    enable: true
+  imagemin:
+    enable: true
+    progressive: true
+  html_minifier:
+    enable: true
+    minifyJS: false
+    minifyCSS: false
+
+# Image Lazy Load
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg:
+
+# Image thumbnails
+thumbnails:
+  masks:
+    - \.jpg$
+  profiles:
+    largeThumb:
+      resize:
+        - 400
+        - 400
+      blur:
+        - 10
+    smallThumb:
+      resize:
+        - 200
+        - 200
+
+# Robots.txt
+robotstxt:
+  useragent: "*"
+  sitemap: /sitemap.xml
