@@ -91,9 +91,7 @@ feed:
 # Asset Pipeline
 asset_pipeline:
   revisioning:
-    enable: true
-    keep: true
-    exclude: ['sitemap.xml', 'robots.txt', 'atom.xml']
+    enable: false
   clean_css:
     enable: true
   uglify_js:
@@ -106,27 +104,22 @@ asset_pipeline:
     minifyJS: false
     minifyCSS: false
 
-# Image Lazy Load
-lazyload:
-  enable: true
-  onlypost: false
-  loadingImg:
-
 # Image thumbnails
-thumbnails:
-  masks:
-    - \.jpg$
+image_sizes:
   profiles:
-    largeThumb:
-      resize:
-        - 400
-        - 400
-      blur:
-        - 10
-    smallThumb:
-      resize:
-        - 200
-        - 200
+    thumbnail:
+      width: 150
+      height: 150
+    small:
+      width: 150
+    medium:
+      width: 300
+    large:
+      width: 700
+    huge:
+      height: 1000
+      allowEnlargement: true
+  defaultProfile: medium
 
 # Robots.txt
 robotstxt:
