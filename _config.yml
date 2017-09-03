@@ -9,6 +9,14 @@ description: Frances & I are spending 3 months in Barcelona while she learns how
 author: Adrian Cardenas & Frances Morales
 language: en
 timezone: America/New_York
+keywords:
+  - travel
+  - Spain
+  - Barcelona
+  - Europe
+  - web development
+  - bootcamp
+  - remote work
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -72,7 +80,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: tranquilpeak
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -85,24 +93,6 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
-  hub:
-  content:
-
-# Asset Pipeline
-asset_pipeline:
-  revisioning:
-    enable: false
-  clean_css:
-    enable: true
-  uglify_js:
-    enable: true
-  imagemin:
-    enable: true
-    progressive: true
-  html_minifier:
-    enable: true
-    minifyJS: false
-    minifyCSS: false
 
 # Image thumbnails
 image_sizes:
