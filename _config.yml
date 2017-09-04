@@ -94,23 +94,6 @@ feed:
   path: atom.xml
   limit: 20
 
-# Image thumbnails
-image_sizes:
-  profiles:
-    thumbnail:
-      width: 150
-      height: 150
-    small:
-      width: 150
-    medium:
-      width: 300
-    large:
-      width: 700
-    huge:
-      height: 1000
-      allowEnlargement: true
-  defaultProfile: medium
-
 # Robots.txt
 robotstxt:
   useragent: "*"
