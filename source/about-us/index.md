@@ -1,6 +1,7 @@
 ---
 title: About us
 date: 2017-05-01 20:26:34
+actions: false
 ---
 
 {% image fancybox center index/frances_and_adrian.jpg 300px 300px "We are Frances Morales and Adrian Cardenas" %}
